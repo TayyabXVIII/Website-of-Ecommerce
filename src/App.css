@@ -1,0 +1,21 @@
+/*Navbar*/
+.navbar-nav a{
+  font-size: 18px;
+}
+.stunning-text {
+  font-weight: bold;
+  font-size: 9.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #ffa600;
+  font-family: "times new roman", serif;
+}
+
+.card-title {
+  color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
