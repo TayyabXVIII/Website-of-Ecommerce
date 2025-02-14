@@ -44,7 +44,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
+                        {/* <form className="d-flex" role="search">
                             <input className="form-control me-2" 
                                    type="search" 
                                    placeholder="Search for Products" 
@@ -52,11 +52,11 @@ const Navbar = () => {
                                     // value={searchCourse}
                                     // onChange={courseSearchUserFunction}
                             />
-                            <button className="btn btn-outline-success me-2" 
+                            {/* <button className="btn btn-outline-success me-2" 
                                     type="submit">
                                         Search
-                            </button>
-                        </form>
+                            </button>}
+                        </form> */}
                         <div className="buttons">
                             <NavLink to='/login' className='btn btn-outline-dark'>
                                 <i className='fa fa-sign-in me-1'> Login</i>
