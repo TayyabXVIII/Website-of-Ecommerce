@@ -11,6 +11,7 @@ import Cart from './Components/Cart.jsx'
 import Login from './Components/Login.jsx'
 import About from './Components/About.jsx'
 import Contact from './Components/Contact.jsx'
+import Register from './Components/Register.jsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/register' element={<Register/>}/>
 
       </Routes>
       
