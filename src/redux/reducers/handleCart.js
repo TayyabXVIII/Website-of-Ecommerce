@@ -34,6 +34,9 @@ const handleCart = (state = cart, action ) => {
                 }
                 break;
 
+                case 'CLEAR_CART':
+                    return []; 
+
             default:
                return state;
                 break;

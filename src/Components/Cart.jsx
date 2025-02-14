@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { addCart, delCart } from '../redux/action';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const cartItems = useSelector(state => state.handleCart);
@@ -22,6 +22,8 @@ const Cart = () => {
     };
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.qty, 0);
+
+    const navigate = useNavigate();
 
     return (
         <div className="container my-5">
@@ -59,7 +61,7 @@ const Cart = () => {
                     <div className="col-md-4">
                         <div className="card p-3">
                             <h4>Total Price: Rs. {totalPrice.toFixed(2)}</h4>
-                            <button className="btn btn-success w-100">Proceed to Checkout</button>
+                            <button className="btn btn-success w-100" on onClick={() => navigate("/checkout")}>Proceed to Checkout</button>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { users } from "../userData"; // Import the users array
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -8,24 +9,28 @@ const Register = () => {
         password: "",
     });
 
-    const navigate = useNavigate(); // To redirect after registration
+    const navigate = useNavigate();
 
-    // Handling input changes
+    // Handle input changes
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
 
-    // Handling form submission
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Simulating account creation (You can replace this with an API call)
-        if (user.name && user.email && user.password) {
-            alert("Your account has been made! 🎉");
-            navigate("/"); // Redirect to Home page
-        } else {
-            alert("Please fill in all fields.");
+        // Check if email already exists
+        const userExists = users.some((u) => u.email === user.email);
+        if (userExists) {
+            alert("User with this email already exists!");
+            return;
         }
+
+        // Register new user
+        users.push({ ...user });
+        alert("Your account has been created! 🎉");
+        navigate("/login"); // Redirect to login page
     };
 
     return (
